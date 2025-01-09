@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n,arr){
+                let answer =[];
+                let tmp = [...arr]; // 깊은 복사
+                tmp.sort((a,b)=>b-a);
+                for (let i=0; i<n; i++) {
+                    for(let j=0; j<n; j++ ){
+                        if(arr[i]==tmp[j]){
+                            answer.push(j+1);
+                            break;
+                        }
+                    }
+                }
+                return answer;
+            }
+
+            let arr=[87, 89, 92, 100, 76];
+            console.log(solution(arr.length,arr));
+        </script>
+    </body>
+</html>

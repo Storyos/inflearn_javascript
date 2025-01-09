@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n,s){  
+                let answer =[];
+                for(let i=0; i<n; i++) {
+                    if(!answer.includes(s[i])){
+                        answer.push(s[i]);
+                    }
+                }
+                return answer;
+            }
+            let str=["good", "time", "good", "time", "student"];
+            console.log(solution(str.length,str));
+        </script>
+    </body>
+</html>

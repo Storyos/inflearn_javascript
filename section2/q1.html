@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n,arr){
+                let prev_num = 0;
+                let answer = [];
+                         
+                for(let i=0; i<n; i++){
+                    if(arr[i]>prev_num)
+                        answer.push(arr[i]);
+                    prev_num=arr[i];
+                }
+
+                return answer;
+            }
+
+
+            let arr=[7, 3, 9, 5, 6, 12];
+            console.log(solution(arr.length,arr));
+        </script>
+    </body>
+</html>
