@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr){
+                let answer=[...arr];
+                let sum = answer.reduce((a,b)=>a+b,0);
+                let flag = false;
+                let minus=[];
+                
+                for(let i=0; i<arr.length; i++) {
+                    for(let j=i+1; j<arr.length; j++){
+                        let tmp = arr[i]+arr[j];
+                        if(sum-tmp==100){
+                            flag=true;
+                            minus=[arr[i],arr[j]];
+                            break;
+                        }
+                    }
+                    if(flag) break;
+                }
+                answer = answer.filter((a)=> !minus.includes(a));
+                return answer;
+            }
+            let arr=[22, 7, 21, 19, 10, 15, 25, 8, 13];
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>

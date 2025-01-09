@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){  
+                let answer;
+                let length = s.length;
+                
+                if(length%2==0){
+                    answer = s.substring((length+1)/2-1, (length+1)/2+1);
+                }
+                else{
+                    answer = s.substring((length+1)/2-1, (length+1)/2);
+                }
+                return answer;
+            }
+            console.log(solution("a"));
+        </script>
+    </body>
+</html>

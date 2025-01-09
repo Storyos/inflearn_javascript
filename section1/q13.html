@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                
+                for(let i=0; i<s.length; i++) {
+                    if(s[i]>='a'&&s[i]<='z'){
+                        s[i].toUpperCase();
+                    }else{
+                        s[i].toLowerCase();
+                    }
+
+                }
+                return s;
+            }
+
+            let str="StuDY";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
