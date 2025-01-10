@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                let tmp = "gooG";
+                tmp = tmp.toLowerCase();
+                tmp = tmp.split("");
+                tmp = tmp.reverse();
+                tmp = tmp.join('');
+
+                if(tmp!=s.toLowerCase()){
+                    return "NO";
+                }else
+                return "YES";
+            }
+            
+            let st="gooG";
+            console.log(solution(st));
+        </script>
+    </body>
+</html>
+
+
+

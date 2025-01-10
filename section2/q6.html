@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            let max = Number.MIN_SAFE_INTEGER;
+            function sero(index,arr){
+                let sum =0;
+                for(let i=0; i<arr.length; i++) {
+                    sum+=arr[i][index];
+                }
+                max=max>sum?max:sum;
+                return;
+            }
+            function garo(index,arr){
+                let sum =0;
+                for(let i=0; i<arr.length; i++) {
+                    sum+=arr[index][i];
+                }
+                max=max>sum?max:sum;
+                return;
+            }
+            function solution(n,arr){
+                let left_up = 0;
+                let right_up = 0;
+
+                for(let i=0; i<n; i++) {
+                    sero(i,arr);
+                    garo(i,arr);
+                    left_up += arr[i][i];
+                    right_up += arr[i][n-i-1];
+                }
+
+                answer = Math.max(max,left_up,right_up)
+                console.log("Answer값:",answer);
+                return answer;
+            }
+
+            let arr=[[10, 13, 10, 12, 15], 
+                     [12, 39, 30, 23, 11],
+                     [11, 25, 50, 53, 15],
+                     [19, 27, 29, 37, 27],
+                     [19, 13, 30, 13, 19]];
+            console.log(solution(arr.length,arr));
+        </script>
+    </body>
+</html>

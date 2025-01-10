@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                let answer = "";
+                let n = s.length;
+                let count =1;
+                let target = s[0];
+                for(let i=1; i<=n; i++) {
+                    if(s[i]==target){
+                        count++;
+                    }else{
+                        answer+=target;
+                        if(count!=1){
+                        answer+=count;
+                        }
+                        count = 1;
+                        target = s[i];
+                    }
+                }
+                return answer;
+            }
+            
+            let str="ABSSSS";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
